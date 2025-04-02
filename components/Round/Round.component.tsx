@@ -45,7 +45,7 @@ const Round = ({
   if (!firstRound && !lastRound) {
     matchElements.push(<Spacer key={`${round}-ls`} />);
   }
-  return <div className="flex flex-col justify-center">{matchElements}</div>;
+  return <div className="flex flex-col justify-around">{matchElements}</div>;
 };
 
 export default Round;

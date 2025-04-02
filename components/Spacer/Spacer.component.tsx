@@ -6,7 +6,7 @@ const Spacer = ({ line = false, height = 1 }: { line?: boolean; height?: number 
     spacers.push(
       <div
         key={i}
-        className={`flex flex-grow ${line ? "border border-[#ccc]" : ""}`}
+        className={`flex flex-grow ${line ? "border-r border-[#ccc]" : ""}`}
       >
         &nbsp;
       </div>

@@ -10,7 +10,7 @@ const getRoundHeaderText = (round: number, totalRounds: number) => {
 const RoundHeader = ({ round, totalRounds }: { round: number; totalRounds: number }) => (
   console.log("round", round, totalRounds),
   <div
-    className={`w-80 mr-32 p-1 text-2xl font-bold ml-8 
+    className={`w-[410px] p-1 text-2xl font-bold border text-center 
     ${round === totalRounds ? "mr-0" : ""}`}
   >
     {getRoundHeaderText(round, totalRounds)}

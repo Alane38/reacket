@@ -1,7 +1,8 @@
 import React from "react";
 import Spacer from "../Spacer/Spacer.component";
+import { cn } from "@/lib/utils";
 
-const Connector = ({ round }: { round: number }) => {
+const Connector = ({ round, hidden }: { round: number; hidden?: boolean }) => {
   const rightLines = 2 ** (round - 1);
   const leftLines = 2 ** round;
 
@@ -23,19 +24,23 @@ const Connector = ({ round }: { round: number }) => {
     } else if (i > 0) {
       leftElements.push(<Spacer key={`${round}-${i}-s`} height={2} />);
     }
-    leftElements.push(
-      <div key={`${i}-l`} className="border border-[#ccc]" />
-    );
+    leftElements.push(<div key={`${i}-l`} className="border border-[#ccc]" />);
   }
 
   return (
-    <div className="flex">
-      <div data-test="connector-left" className="flex flex-col justify-center w-16">
+    <div className={cn("flex", hidden && "opacity-0")}>
+      <div
+        data-test="connector-left"
+        className="flex flex-col justify-center w-16"
+      >
         <Spacer key={`${round}-l-t`} />
         {leftElements}
         <Spacer key={`${round}-l-b`} />
       </div>
-      <div data-test="connector-right" className="flex flex-col justify-center">
+      <div
+        data-test="connector-right"
+        className="flex flex-col justify-center w-8"
+      >
         <Spacer key={`${round}-r-t`} />
         {rightElements}
         <Spacer key={`${round}-r-b`} />

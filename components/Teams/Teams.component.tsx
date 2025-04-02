@@ -66,8 +66,8 @@ const Teams = ({
   const matchNumber = `R${round}`;
 
   return (
-    <div className="space-y-4">
-      <div className="flex justify-between items-center mb-1">
+    <div className="space-y-2">
+      <div className="flex justify-between">
         <span className="text-xs text-muted-foreground">{matchNumber}</span>
       </div>
 
