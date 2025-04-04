@@ -11,9 +11,7 @@ export default function convertMatchesToRounds(matches: Match[]) {
     }
     roundsObject[round].matches.push(match);
   });
-  console.log("roundObjects", roundsObject);
   const rounds: { round: number; matches: Match[] }[] =
     Object.values(roundsObject);
-    console.log("rounds", rounds);
   return rounds.sort((a, b) => a.round - b.round);
 }

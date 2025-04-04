@@ -16,13 +16,13 @@ const CustomReacket = ({
   isOwner: boolean;
   onMatchSelect: (match: Match) => Match;
 }) => {
-  console.log("received customReacket", matches);
+  // console.log("received customReacket", matches);
   const rounds = convertMatchesToRounds(matches);
   return (
     <div>
       <div className="mb-4 flex border">
         {rounds.map((round: { round: number; matches: Match[] }, index) => {
-          console.log("round", round, rounds);
+          // console.log("round", round, rounds);
           return (
             <RoundHeader
               key={`round-header-${round.round}`}
